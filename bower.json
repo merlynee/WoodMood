@@ -1,0 +1,21 @@
+{
+  "name": "woodmood",
+  "description": "",
+  "main": "app.js",
+  "authors": [
+    "merlynee <ping.liu@ihaveu.net>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assert/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "woodmood",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.15.1",
+    "connect-mongo": "^1.2.0",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.4.2",
+    "express": "^4.13.4",
+    "express-session": "^1.13.0",
+    "moment": "^2.13.0",
+    "mongoose": "^4.4.12",
+    "morgan": "^1.7.0",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-concurrent": "^2.3.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-nodemon": "^0.4.2"
+  }
+}
