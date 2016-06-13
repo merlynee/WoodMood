@@ -33,8 +33,9 @@ app.use(expressSession({
 require('./config/routes')(app)
 
 if('development' === app.get('env')){
+	console.log('env:develop' );
 	app.set('showStackError' , true)
-	app.use(morgan(':method :url :status'))
+	app.use(morgan(':method :url :status :remote-addr'))
 	mongoose.set('debug',true)
 }
 
