@@ -15,9 +15,22 @@ app.set('views','./views/pages')
 app.set('view engine','ejs')
 app.use(bodyParser.urlencoded({extended:true}))
 app.use(cookieparser())
-app.use(serveStatic(__dirname + '/public'))
+//静态资源，7天内cached，html不cached
+app.use(serveStatic(__dirname + '/assert'))
+// app.use(serveStatic(__dirname + '/asset',{
+// 	maxAge: '1d',
+// 	setHeaders: setCustomCacheControl
+// }))
+// function setCustomCacheControl (res, path) {
+// 	if (serveStatic.mime.lookup(path) === 'text/html') {
+// 		// Custom Cache-Control for HTML files
+// 		res.setHeader('Cache-Control', 'public, max-age=0')
+// 	}
+// }
+//mongo的配置
 var dbURL = 'mongodb://localhost/nodeMongo'
 mongoose.connect(dbURL)
+//session的expire时间
 app.use(expressSession({
 	secret : 'merlynee',
 	store : new MongoStore({
