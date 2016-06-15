@@ -8,8 +8,11 @@ var cookieparser = require('cookie-parser')
 var morgan = require('morgan')   //HTTP request logger middleware for node.js
 var MongoStore = require('connect-mongo')(expressSession)
 var serveStatic = require('serve-static')
+var favicon = require('serve-favicon');
+
 
 var app = express()
+app.use(favicon(__dirname + '/assert/img/favicon.ico'))
 app.locals.moment = require('moment')
 app.set('views','./views/pages')
 app.set('view engine','ejs')
