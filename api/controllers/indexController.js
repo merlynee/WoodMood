@@ -4,3 +4,5 @@ exports.index = function index(req,res){
 		title: 'IndexPage'
 	})
 }
+
+

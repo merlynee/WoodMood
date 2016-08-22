@@ -46,7 +46,7 @@ app.use(expressSession({
 }))
 
 
-require('./config/routes')(app)
+require('./config/routes/routes')(app)
 
 if('development' === app.get('env')){
 	console.log('env:develop' );
@@ -55,6 +55,7 @@ if('development' === app.get('env')){
 	mongoose.set('debug',true)
 }
 
-var port = process.env.PORT || 3000
+// var port = process.env.PORT || 80
+var port = 80
 app.listen(port)
 console.log('Server Started:' + port );
